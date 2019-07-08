@@ -1,0 +1,24 @@
+Start server
+./bin/start-hbase.sh
+Hbase Shell
+./bin/hbase shell
+status
+Creating table
+hbase(main):001:0> create 'tableTest', 'familyName1’
+List all table 
+hbase(main):004:0> list
+Put 
+hbase(main):005:0> put 'tableTest','keyRow1','familyName1:f1','value1’
+Scan whole table
+hbase(main):007:0> scan 'tableTest’
+Get a row
+hbase(main):008:0> get 'tableTest','keyRow1’
+Disable a table
+hbase(main):009:0> disable 'tableTest’
+Delete a table
+hbase(main):010:0> drop 'tableTest
+Changing the Maximum Number of Cells of a Column Family
+alter 't1', NAME ⇒ 'f1', VERSIONS ⇒ 5
+alter 'emp', NAME ⇒ 'personal data', VERSIONS ⇒ 5
+Setting Read Only
+alter 't1', READONLY(option)
