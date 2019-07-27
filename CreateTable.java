@@ -1,6 +1,6 @@
 /**
 To compile this code
-javac -cp .:/usr/lib/hadoop/* :/usr/lib/hadoop-mapreduce/* :/usr/lib/hbase/* CreateTable.java
+javac -cp .:/usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/*:/usr/lib/hbase/* CreateTable.java
 */
 
 import java.io.IOException;
