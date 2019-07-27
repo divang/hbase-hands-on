@@ -1,6 +1,7 @@
 /**
 To compile this code
 javac -cp .:/usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/*:/usr/lib/hbase/* InsertData.java
+java -cp .:/usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/*:/usr/lib/hbase/*::/usr/lib/hbase/lib/* InsertData
 */
 
 import java.io.IOException;
