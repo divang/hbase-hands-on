@@ -32,8 +32,6 @@ public class ScanTable{
       ResultScanner scanner = table.getScanner(scan);
 
       // Reading values from scan result
-      for (Result result = scanner.next(); result != null; result = scanner.next())
-
       for (Result result = scanner.next(); result != null; result=scanner.next()){
 		  List<Cell> cells = result.listCells();
 		      for (Cell cell : cells) {
