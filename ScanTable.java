@@ -34,7 +34,15 @@ public class ScanTable{
       // Reading values from scan result
       for (Result result = scanner.next(); result != null; result = scanner.next())
 
-      System.out.println("Found row : " + result);
+      for (Result result = scanner.next(); result != null; result=scanner.next()){
+		  List<Cell> cells = result.listCells();
+		      for (Cell cell : cells) {
+			   String empid = Bytes.toString(CellUtil.cloneRow(cell));
+			   String value = Bytes.toString(CellUtil.cloneValue(cell));
+			   System.out.println("key=" + empid +" value=" + value);     
+		    }
+	   }
+      
       //closing the scanner
       scanner.close();
    }
