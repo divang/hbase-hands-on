@@ -15,10 +15,15 @@ Get a row
 hbase(main):008:0> get 'tableTest','keyRow1’
 Disable a table
 hbase(main):009:0> disable 'tableTest’
+Enable a table
+hbase(main):009:0> enable 'tableTest’
 Delete a table
 hbase(main):010:0> drop 'tableTest
-Changing the Maximum Number of Cells of a Column Family
-alter 't1', NAME ⇒ 'f1', VERSIONS ⇒ 5
-alter 'emp', NAME ⇒ 'personal data', VERSIONS ⇒ 5
+Alter table, add new family:
+hbase(main):010:0> alter 'tableTest', 'familyName2’
+Alter table, remove a family:
+hbase(main):007:0> alter 'tableTest','delete'⇒'familyName2'
+Alter version changes
+hbase(main):010:0>alter 'tableTest', NAME ⇒ 'familyName1', VERSIONS ⇒ 5
 Setting Read Only
-alter 't1', READONLY(option)
+hbase(main):010:0>alter 'tableTest', READONLY(option)
