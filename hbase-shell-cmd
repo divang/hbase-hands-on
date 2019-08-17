@@ -1,26 +1,24 @@
-Start server
-./bin/start-hbase.sh
-Hbase Shell
-./bin/hbase shell
+Hbase Shell (CDH VM)
+>hbase shell
 status
 Creating table
-hbase(main):001:0> create 'tableTest', 'familyName1’
+hbase(main):001:0> create 'tableTest', 'familyName1'
 List all table 
 hbase(main):004:0> list
 Put 
-hbase(main):005:0> put 'tableTest','keyRow1','familyName1:f1','value1’
+hbase(main):005:0> put 'tableTest','keyRow1','familyName1:f1','value1'
 Scan whole table
-hbase(main):007:0> scan 'tableTest’
+hbase(main):007:0> scan 'tableTest'
 Get a row
-hbase(main):008:0> get 'tableTest','keyRow1’
+hbase(main):008:0> get 'tableTest','keyRow1'
 Disable a table
-hbase(main):009:0> disable 'tableTest’
+hbase(main):009:0> disable 'tableTest'
 Enable a table
-hbase(main):009:0> enable 'tableTest’
+hbase(main):009:0> enable 'tableTest'
 Delete a table
-hbase(main):010:0> drop 'tableTest
+hbase(main):010:0> drop 'tableTest'
 Alter table, add new family:
-hbase(main):010:0> alter 'tableTest', 'familyName2’
+hbase(main):010:0> alter 'tableTest', 'familyName2'
 Alter table, remove a family:
 hbase(main):007:0> alter 'tableTest','delete'⇒'familyName2'
 Alter version changes
